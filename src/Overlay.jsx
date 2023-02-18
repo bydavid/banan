@@ -11,28 +11,17 @@ export default function Overlay() {
         <h3>
           A project by David Adeyemi
         </h3>
-        <p>In React & Threejs — Tutorial by 0xca0a </p>
+        <p>Built in React & ThreeJS — Tutorial by 0xca0a </p>
       </TopLeft>
       <BottomLeft>
-        A runtime deconstruction of <a href="https://playful.software">playful.software</a>
+          <a href='https://0xca0a.gumroad.com/l/B4N4N4S'>More about this site</a>
+          <br />
+          <a href="https://bydavid.me">Visit me on my website</a>
+          <br />
+          <a href="https://www.linkedin.com/in/davidfadeyemi/">Let's connect on LinkedIn</a>
+          <br />
       </BottomLeft>
       <BottomRight>
-        Inspiration and ideas
-        <br />
-        Fundamentals
-        <br />
-        Finding models
-        <br />
-        Preparing them for the web
-        <br />
-        Displaying and changing models
-        <br />
-        Animation fundamentals
-        <br />
-        Effects and making things look good
-        <br />
-        Performance and time to load
-        <br />
       </BottomRight>
       <Hamburger>
         <div />
