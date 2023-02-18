@@ -5,6 +5,7 @@ import React, { Suspense, useRef, useState} from 'react'
 import {Canvas, useFrame, useThree} from "@react-three/fiber";
 import {Detailed, Environment, useGLTF} from "@react-three/drei";
 import {DepthOfField, EffectComposer} from "@react-three/postprocessing";
+import Overlay from "./Overlay.jsx";
 
 function Banan({ index, z, speed }) {
     const ref = useRef()
@@ -37,7 +38,7 @@ function Banan({ index, z, speed }) {
 }
 
 export default function App( { speed = 1, count = 80, depth = 80, easing = (x) => Math.sqrt(1 - Math.pow(x - 1, 2)) }) {
-    return (
+    return (<>
       <Canvas gl={{ antialias: false }} dpr={[1, 1.5]} camera={{ position: [0, 0, 10], fov: 20, near: 0.01, far: depth + 15 }}>
           <color attach="background" args={['#ffbf40']} />
           <spotLight position={[10, 20, 10]} penumbra={1} intensity={3} color="orange" />
@@ -46,5 +47,7 @@ export default function App( { speed = 1, count = 80, depth = 80, easing = (x) =
           <EffectComposer multisampling={0}>
               <DepthOfField target={[0, 0, 60]} focalLength={0.5} bokehScale={11} height={700} />
           </EffectComposer>
-      </Canvas>)
+      </Canvas>
+        <Overlay/>
+    </>)
 }
