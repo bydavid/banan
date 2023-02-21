@@ -1,4 +1,4 @@
-import { Container, TopLeft, BottomLeft, BottomRight, Hamburger } from './styles'
+import { Container, TopLeft, BottomLeft, BottomRight, Hamburger } from '../styles.js'
 import { VelvetBanana } from './VelvetBanana.jsx'
 
 export default function Overlay() {
