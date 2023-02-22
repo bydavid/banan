@@ -3,11 +3,12 @@ import {Detailed, useGLTF} from "@react-three/drei";
 import * as THREE from "three";
 import {useRef, useState} from "react";
 
-export default function Strawb({ index, z, speed }) {
+export default function Strawb(index, z, speed) {
+
     const ref = useRef()
     const { viewport, camera } = useThree() // allows use of viewport rather than absolute values
     const { width, height } = viewport.getCurrentViewport(camera, [0, 0, -z])  // camera allows objects further in negative z to be considered
-    const { nodes, materials } = useGLTF('/banana-v1-transformed.glb') // a glftx transformed glb file
+    const { nodes, materials } = useGLTF("/strawberry-v1.glb"); // a glftx transformed glb file
 
     const [data] = useState({
         y: THREE.MathUtils.randFloatSpread(height * 2), // starting x
@@ -26,9 +27,24 @@ export default function Strawb({ index, z, speed }) {
 
     return (
         <Detailed ref={ref} distances={[0, 65, 80]}>
-            <mesh geometry={nodes.banana_high.geometry} material={materials.skin} material-emissive="#ff9f00" />
-            <mesh geometry={nodes.banana_mid.geometry} material={materials.skin} material-emissive="#ff9f00" />
-            <mesh geometry={nodes.banana_low.geometry} material={materials.skin} material-emissive="#ff9f00" />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.defaultMaterial.geometry}
+                material={materials["1001"]}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.defaultMaterial001.geometry}
+                material={materials["1001"]}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.defaultMaterial002.geometry}
+                material={materials["1001"]}
+            />
         </Detailed>
-    )
+    );
 }

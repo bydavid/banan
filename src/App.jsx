@@ -1,5 +1,4 @@
 // noinspection JSValidateTypes
-
 import React from 'react'
 import BananPage from './pages/BananPage'
 import Overlay from "./components/Overlay.jsx";
@@ -8,18 +7,26 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import ErrorPage from "./pages/error-page.jsx";
-import Root from "./pages/Root.jsx";
+import StrawbPage from "./pages/StrawbPage.jsx";
 
 
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Root/>,
+        element: <Overlay/>,
         errorElement: <ErrorPage />,
         children: [
             {
-                path: 'Banan',
+                path: '/',
+                element: <BananPage/>,
+            },
+            {
+                path: '/strawbs',
+                element: <StrawbPage/>,
+            },
+            {
+                path: '/goes',
                 element: <BananPage/>,
             },
         ],
