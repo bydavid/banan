@@ -17,7 +17,7 @@ export default function StrawbPage({ speed = 1, count = 80, depth = 80, easing =
                                                               speed={speed}/> /* prettier-ignore */)}
                 <Environment preset="sunset"/>
                 <EffectComposer multisampling={0}>
-                    <DepthOfField target={[0, 0, 60]} focalLength={0.5} bokehScale={11} height={700}/>
+                    <DepthOfField target={[0, 0, 60]} focalLength={0.5} bokehScale={10} height={700}/>
                 </EffectComposer>
             </Canvas>
         </>
