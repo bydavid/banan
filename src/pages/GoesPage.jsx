@@ -14,7 +14,7 @@ export default function GoesPage({ speed = 1, count = 100, depth = 80, easing = 
                 console.log(Math.round(easing(i / count) * depth))
                 <Environment preset="sunset"/>
                 <EffectComposer multisampling={0}>
-                    <DepthOfField target={[0, 0, 60]} focalLength={0.5} bokehScale={10} height={700}/>
+                    <DepthOfField target={[0, 0, 60]} focalLength={1} bokehScale={10} height={700}/>
                 </EffectComposer>
             </Canvas>
         </>

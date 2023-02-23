@@ -4,7 +4,7 @@ import {Environment} from "@react-three/drei";
 import {DepthOfField, EffectComposer} from "@react-three/postprocessing";
 
 
-export default function StrawbPage({ speed = 1, count = 80, depth = 80, easing = (x) => Math.sqrt(1 - Math.pow(x - 1, 2)) }) {
+export default function StrawbPage({ speed = 1, count = 380, depth = 80, easing = (x) => Math.sqrt(1 - Math.pow(x - 1, 2)) }) {
     return(
         <>
             <Canvas gl={{antialias: false}} dpr={[1, 1.5]}
@@ -15,7 +15,7 @@ export default function StrawbPage({ speed = 1, count = 80, depth = 80, easing =
 
                 <Environment preset="sunset"/>
                 <EffectComposer multisampling={0}>
-                    <DepthOfField target={[0, 0, 60]} focalLength={0.5} bokehScale={10} height={700}/>
+                    <DepthOfField target={[0, 0, 60]} focalLength={1} bokehScale={10} height={700}/>
                 </EffectComposer>
             </Canvas>
         </>

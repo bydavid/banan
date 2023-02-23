@@ -13,7 +13,7 @@ export default function Goes({index, z, speed}) {
     const [data] = useState({
         y: THREE.MathUtils.randFloatSpread(height * 2), // starting x
         x: THREE.MathUtils.randFloatSpread(2), // starting y
-        spin: THREE.MathUtils.randFloat(8, 12), // rotation scalar
+        spin: THREE.MathUtils.randFloat(10, 15), // rotation scalar
         rX: Math.random() * Math.PI,  // starting rotation in x
         rZ: Math.random() * Math.PI // starting rotation in z
     })
@@ -30,7 +30,7 @@ export default function Goes({index, z, speed}) {
             ref={ref}
             castShadow
             receiveShadow
-            scale={22}
+            scale={35}
             geometry={nodes.Mango.geometry}
             material={materials.AppleMangoSkin}
         />
