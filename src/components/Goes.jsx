@@ -3,7 +3,7 @@ import { useGLTF } from "@react-three/drei";
 import {useFrame, useThree} from "@react-three/fiber";
 import * as THREE from 'three'
 
-export default function Goes({z}) {
+export default function Goes({index, z, speed}) {
     const ref = useRef()
     const { nodes, materials } = useGLTF("/mango-v1.glb");
 
