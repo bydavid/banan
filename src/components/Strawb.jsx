@@ -18,7 +18,7 @@ export default function Strawb({z}) {
         rZ: Math.random() * Math.PI,
     })
 
-    useFrame((state)=> {
+    useFrame((state, dt)=> {
         ref.current.rotation.set((data.rX += 0.001), (data.rY += 0.001), (data.rZ += 0.002))
         ref.current.position.set(data.x * width, (data.y += 0.01), z)
         if (data.y > (height + height*.1) / 1.5) {
