@@ -18,11 +18,12 @@ export default function Goes({z}) {
         rZ: Math.random() * Math.PI,
     })
 
-    useFrame((state)=> {
+    useFrame((state, dt)=> {
         ref.current.rotation.set((data.rX += 0.001), (data.rY += 0.001), (data.rZ += 0.002))
         ref.current.position.set(data.x * width, (data.y += 0.01), z)
-        if (data.y > height / 1.5) {
-            data.y = -height / 1.5
+        if (data.y > (height*1.1) / 1.5) {
+            data.y = -(height*1.1) / 1.5
+            data.x = THREE.MathUtils.randFloatSpread(2)
         }
     })
 
@@ -31,7 +32,7 @@ export default function Goes({z}) {
             ref={ref}
             castShadow
             receiveShadow
-            scale={20}
+            scale={22}
             geometry={nodes.Mango.geometry}
             material={materials.AppleMangoSkin}
         />

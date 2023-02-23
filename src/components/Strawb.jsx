@@ -21,8 +21,9 @@ export default function Strawb({z}) {
     useFrame((state)=> {
         ref.current.rotation.set((data.rX += 0.001), (data.rY += 0.001), (data.rZ += 0.002))
         ref.current.position.set(data.x * width, (data.y += 0.01), z)
-        if (data.y > height / 1.5) {
+        if (data.y > (height + height*.1) / 1.5) {
             data.y = -height / 1.5
+            data.x = THREE.MathUtils.randFloatSpread(2)
         }
     })
 

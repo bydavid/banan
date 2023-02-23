@@ -3,7 +3,7 @@ import Banan from "../components/Banan.jsx";
 import {Environment} from "@react-three/drei";
 import {DepthOfField, EffectComposer} from "@react-three/postprocessing";
 
-export default function BananPage({ speed = 1, count = 80, depth = 80, easing = (x) => Math.sqrt(1 - Math.pow(x - 1, 2)) }) {
+export default function BananPage({ speed = 1, count = 80, depth = 120, easing = (x) => Math.sqrt(1 - Math.pow(x - 1, 2)) }) {
     return(
     <>
         <Canvas gl={{antialias: false}} dpr={[1, 1.5]}
@@ -14,7 +14,7 @@ export default function BananPage({ speed = 1, count = 80, depth = 80, easing = 
                                                           speed={speed}/> /* prettier-ignore */)}
             <Environment preset="sunset"/>
             <EffectComposer multisampling={0}>
-                <DepthOfField target={[0, 0, 60]} focalLength={0.5} bokehScale={11} height={700}/>
+                <DepthOfField target={[0, 0, depth/2]} focalLength={0.5} bokehScale={11} height={700}/>
             </EffectComposer>
         </Canvas>
     </>
