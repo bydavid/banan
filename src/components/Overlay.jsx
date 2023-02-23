@@ -1,4 +1,4 @@
-import { Container, TopLeft, BottomLeft, BottomRight, Hamburger } from '../styles.js'
+import {Container, TopLeft, BottomLeft, BottomRight, Spacer, BottomMiddle, RightMiddle, FadeIn} from '../styles.js'
 import { VelvetBanana } from './VelvetBanana.jsx'
 import { Outlet, Link } from 'react-router-dom'
 
@@ -7,6 +7,7 @@ export default function Overlay() {
       <>
         <Outlet/>
           <Container>
+            <FadeIn>
               <TopLeft>
                   <h1>
                       Banan —
@@ -24,23 +25,25 @@ export default function Overlay() {
                   <a href="https://www.linkedin.com/in/davidfadeyemi/">Let's connect on LinkedIn</a>
                   <br />
               </BottomLeft>
+              <RightMiddle>
+                  <h3>Welcome to my page!</h3>
+              </RightMiddle>
+              <BottomMiddle>
+                  <Link to={'Banan'}>Banan</Link>
+                  <span>     </span>
+                  <Link to={'Strawb'}>Strawbs</Link>
+                  <span>     </span>
+                  <Link to={'Goes'}>Goes</Link>
+              </BottomMiddle>
               <BottomRight>
-                  <ul>
-                      <li>
-                        <Link to={'Strawb'}>Strawbs</Link>
-                      </li>
-                      <li>
-                        <Link to={'Goes'}>Goes</Link>
-                      </li>
-                  </ul>
               </BottomRight>
-              <Hamburger>
+              <Spacer>
                   <div />
                   <div />
                   <div />
-                  <div />
-              </Hamburger>
+              </Spacer>
               <VelvetBanana />
+            </FadeIn>
           </Container>
       </>
   )

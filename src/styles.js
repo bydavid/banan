@@ -5,24 +5,14 @@ export const fade = keyframes`
   to { opacity: 0; }
 `
 
-export const FadeIn = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  background: #ffd863;
-  animation: ${fade} 4s normal forwards ease-in-out;
+export const FadeIn = styled.div` ${fade} 4s normal forwards ease-in-out;
 `
 
 export const Container = styled.div`
   font-family: 'Inter';
   font-size: 16px;
   & h1 {
-    padding: 0;
-    margin: 0 0 0.05em 0;
-    font-family: 'Ayer Poster', serif;
+      font-family: 'Ayer Poster', serif;   
     font-weight: 400;
     font-size: min(18vw, 14em);
     line-height: 0.85em;
@@ -43,6 +33,13 @@ export const BottomLeft = styled.div`
   max-width: 40%;
 `
 
+export const BottomMiddle = styled.div`
+  position: absolute;
+  bottom: 5vw;
+  left: 45vw; 
+  text-align: center;
+`
+
 export const BottomRight = styled.div`
   position: absolute;
   bottom: 5vw;
@@ -54,7 +51,7 @@ export const BottomRight = styled.div`
   text-align: right;
 `
 
-export const Hamburger = styled.div`
+export const Spacer = styled.div`
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -69,7 +66,7 @@ export const Hamburger = styled.div`
   }
 `
 
-export const LeftMiddle = styled.div`
+export const RightMiddle = styled.div`
   position: absolute;
   bottom: 50%;
   right: 5vw;
