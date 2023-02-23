@@ -9,7 +9,7 @@ export default function GoesPage({ speed = 1, count = 80, depth = 80, easing = (
         <>
             <Canvas gl={{antialias: false}} dpr={[1, 1.5]}
                     camera={{position: [0, 0, 10], fov: 20, near: 0.01, far: depth + 15}}>
-                <color attach="background" args={['#fa2a55']}/>
+                <color attach="background" args={['#2B7CEA']}/>
                 <spotLight position={[10, 20, 10]} penumbra={1} intensity={3} color="pink"/>
                 {Array.from({ length: count }, (_, i) => (<Goes key={i} z={-i} />))}
 
