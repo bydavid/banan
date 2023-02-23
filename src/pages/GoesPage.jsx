@@ -10,7 +10,7 @@ export default function GoesPage({ speed = 1, count = 100, depth = 80, easing = 
                     camera={{position: [0, 0, 10], fov: 20, near: 0.01, far: depth + 15}}>
                 <color attach="background" args={['#2B7CEA']}/>
                 <spotLight position={[10, 20, 10]} penumbra={1} intensity={3} color="red"/>
-                {Array.from({ length: count }, (_, i) => <Goes key={i} index={i} z={-i} speed={speed} />)}
+                {Array.from({ length: count }, (_, i) => <Goes key={i} index={i} z={Math.round(easing(i / count) * depth)} speed={speed} />)}
                 console.log(Math.round(easing(i / count) * depth))
                 <Environment preset="sunset"/>
                 <EffectComposer multisampling={0}>

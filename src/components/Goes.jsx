@@ -8,23 +8,21 @@ export default function Goes({index, z, speed}) {
     const { nodes, materials } = useGLTF("/mango-v1.glb");
 
     const { viewport, camera } = useThree()
-    const { width, height } = viewport.getCurrentViewport(camera, [ 0, 0, z])
+    const { width, height } = viewport.getCurrentViewport(camera, [ 0, 0, -z])
 
     const [data] = useState({
-        x: THREE.MathUtils.randFloatSpread(2),
-        y: THREE.MathUtils.randFloatSpread(height),
-        rX: Math.random() * Math.PI,
-        rY: Math.random() * Math.PI,
-        rZ: Math.random() * Math.PI,
+        y: THREE.MathUtils.randFloatSpread(height * 2), // starting x
+        x: THREE.MathUtils.randFloatSpread(2), // starting y
+        spin: THREE.MathUtils.randFloat(8, 12), // rotation scalar
+        rX: Math.random() * Math.PI,  // starting rotation in x
+        rZ: Math.random() * Math.PI // starting rotation in z
     })
 
-    useFrame((state, dt)=> {
-        ref.current.rotation.set((data.rX += 0.001), (data.rY += 0.001), (data.rZ += 0.002))
-        ref.current.position.set(data.x * width, (data.y += 0.01), z)
-        if (data.y > (height*1.1) / 1.5) {
-            data.y = -(height*1.1) / 1.5
-            data.x = THREE.MathUtils.randFloatSpread(2)
-        }
+    useFrame((state, dt) => {
+        // changes per delta
+        if (dt < 0.1) ref.current.position.set(index === 0 ? 0 : data.x * width, (data.y += dt * speed), -z)
+        ref.current.rotation.set((data.rX += dt / data.spin), Math.sin(index * 1000 + state.clock.elapsedTime / 10) * Math.PI, (data.rZ += dt / data.spin))
+        if (data.y > height * (index === 0 ? 4 : 1)) data.y = -(height * (index === 0 ? 4 : 1))
     })
 
     return (
