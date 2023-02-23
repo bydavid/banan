@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import ErrorPage from "./pages/error-page.jsx";
 import StrawbPage from "./pages/StrawbPage.jsx";
+import GoesPage from "./pages/GoesPage.jsx";
 
 
 
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/goes',
-                element: <BananPage/>,
+                element: <GoesPage/>,
             },
         ],
     },

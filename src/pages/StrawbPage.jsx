@@ -2,7 +2,6 @@ import {Canvas} from "@react-three/fiber";
 import Strawb from "../components/Strawb.jsx";
 import {Environment} from "@react-three/drei";
 import {DepthOfField, EffectComposer} from "@react-three/postprocessing";
-import Banan from "../components/Banan.jsx";
 
 
 export default function StrawbPage({ speed = 1, count = 80, depth = 80, easing = (x) => Math.sqrt(1 - Math.pow(x - 1, 2)) }) {
@@ -23,6 +22,3 @@ export default function StrawbPage({ speed = 1, count = 80, depth = 80, easing =
     )
 }
 
-//{Array.from({length: count},
-//                     (_, i) => <Strawb key={i} index={i} z={Math.round(easing(i / count) * depth)}
-//                                       speed={speed}/> /* prettier-ignore */)}
