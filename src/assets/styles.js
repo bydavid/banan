@@ -9,13 +9,29 @@ export const FadeIn = styled.div` ${fade} 4s normal forwards ease-in-out;
 `
 
 export const Container = styled.div`
-  font-family: 'Inter';
   font-size: 16px;
   & h1 {
-      font-family: 'Ayer Poster', serif;   
+    color: seashell;
+    font-family: 'Ayer Poster', serif;   
     font-weight: 400;
     font-size: min(18vw, 14em);
     line-height: 0.85em;
+  }
+  & h2 {
+    color: seagreen;
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: min(5vw, 3em);
+    line-height: 0.85em;
+    -webkit-text-stroke: 0.67px navy;
+  }
+  & p {
+    color: seagreen;
+    font-family: Tahoma, sans-serif;
+    font-weight: 400;
+    font-size: min(2.5vw, 1.5em);
+    line-height: 0.85em;
+    -webkit-text-stroke: 0.3px navy;
   }
 `
 

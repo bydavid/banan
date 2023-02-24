@@ -1,4 +1,4 @@
-import {Container, TopLeft, BottomLeft, BottomRight, TopRight, BottomMiddle, RightMiddle, FadeIn} from '../styles.js'
+import {Container, TopLeft, BottomLeft, BottomRight, TopRight, BottomMiddle, RightMiddle, FadeIn} from '../assets/styles.js'
 import { VelvetBanana } from './VelvetBanana.jsx'
 import { Outlet, Link } from 'react-router-dom'
 
@@ -12,9 +12,9 @@ export default function Overlay() {
                   <h1>
                       Banan —
                   </h1>
-                  <h3>
+                  <h2>
                       A project by David Adeyemi
-                  </h3>
+                  </h2>
                   <p>Built in React & ThreeJS — Tutorial by 0xca0a </p>
               </TopLeft>
               <BottomLeft>
