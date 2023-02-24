@@ -38,6 +38,13 @@ export const BottomMiddle = styled.div`
   bottom: 5vw;
   left: 45vw; 
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  & > div {
+    position: relative;
+    width: 48px;
+    height: 2px;
+  }
 `
 
 export const BottomRight = styled.div`
@@ -51,19 +58,12 @@ export const BottomRight = styled.div`
   text-align: right;
 `
 
-export const Spacer = styled.div`
+export const TopRight = styled.div`
   position: absolute;
   display: flex;
   flex-direction: column;
   top: 5vw;
   right: 5vw;
-  & > div {
-    position: relative;
-    width: 24px;
-    height: 2px;
-    background: #252525;
-    margin-bottom: 6px;
-  }
 `
 
 export const RightMiddle = styled.div`
