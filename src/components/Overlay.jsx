@@ -1,46 +1,59 @@
-import { Container, TopLeft, BottomLeft, BottomRight, Hamburger } from '../styles.js'
+import {
+    Container,
+    TopLeft,
+    BottomLeft,
+    BottomRight,
+    TopRight,
+    BottomMiddle,
+    RightMiddle,
+    FadeIn,
+    Wink, StyledLink
+} from '../assets/styles.js'
 import { VelvetBanana } from './VelvetBanana.jsx'
-import { Outlet, Link } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
+
 
 export default function Overlay() {
   return (
       <>
         <Outlet/>
           <Container>
+            <FadeIn>
               <TopLeft>
                   <h1>
                       Banan —
                   </h1>
-                  <h3>
+                  <h2>
                       A project by David Adeyemi
-                  </h3>
+                  </h2>
                   <p>Built in React & ThreeJS — Tutorial by 0xca0a </p>
               </TopLeft>
               <BottomLeft>
-                  <a href='https://0xca0a.gumroad.com/l/B4N4N4S'>More about this site</a>
+                  <Wink href='https://0xca0a.gumroad.com/l/B4N4N4S'>More about this site</Wink>
                   <br />
-                  <a href="https://bydavid.me">Visit me on my website</a>
+                  <Wink href="https://bydavid.me">Visit me on my site</Wink>
                   <br />
-                  <a href="https://www.linkedin.com/in/davidfadeyemi/">Let's connect on LinkedIn</a>
+                  <Wink href="https://www.linkedin.com/in/davidfadeyemi/">Let's connect on LinkedIn</Wink>
                   <br />
               </BottomLeft>
+              <RightMiddle>
+                  <h3>Hungry yet? :)</h3>
+              </RightMiddle>
+              <BottomMiddle>
+
+                  <StyledLink to={'/'}>🍌 Banan</StyledLink>
+                  <div/>
+                  <StyledLink to={'strawbs'}>🍓 Strawbs</StyledLink>
+                  <div/>
+                  <StyledLink to={'goes'}>🥭 Goes</StyledLink>
+              </BottomMiddle>
               <BottomRight>
-                  <ul>
-                      <li>
-                        <Link to={'Strawb'}>Strawbs</Link>
-                      </li>
-                      <li>
-                        <Link to={'Goes'}>Goes</Link>
-                      </li>
-                  </ul>
               </BottomRight>
-              <Hamburger>
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-              </Hamburger>
+              <TopRight>
+                  <a href='https://bydavid.me'><img src="src/assets/banner.png" alt="banner" /></a>
+              </TopRight>
               <VelvetBanana />
+            </FadeIn>
           </Container>
       </>
   )

@@ -9,3 +9,7 @@ Written w/ React leveraging the React Three library
 A few effects used:
 Depth of Field + Bokeh to give the impression of closer and further bananas without having to extend z distance a great deal.
 Emissive Material + Lighting to give the bananas a fresh, kitchen lighting look
+
+
+Special Thanks:
+https://css-tricks.com/css-link-hover-effects/
