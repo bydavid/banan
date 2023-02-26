@@ -7,7 +7,7 @@ export default function Banan({ index, z, speed }) {
     const ref = useRef()
     const { viewport, camera } = useThree() // allows use of viewport rather than absolute values
     const { width, height } = viewport.getCurrentViewport(camera, [0, 0, -z])  // camera allows objects further in negative z to be considered
-    const { nodes, materials } = useGLTF('/banana-v1-transformed.glb') // a glftx transformed glb file
+    const { nodes, materials } = useGLTF('/banan/banana-v1-transformed.glb') // a glftx transformed glb file
 
     const [data] = useState({
         y: THREE.MathUtils.randFloatSpread(height * 2), // starting x

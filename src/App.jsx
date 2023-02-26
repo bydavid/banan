@@ -14,20 +14,20 @@ import GoesPage from "./pages/GoesPage.jsx";
 
 const router = createBrowserRouter([
     {
-        path: "/",
+        path: "/banan/",
         element: <Overlay/>,
         errorElement: <ErrorPage />,
         children: [
             {
-                path: '/',
+                path: '/banan/',
                 element: <BananPage/>,
             },
             {
-                path: '/strawbs',
+                path: '/banan/strawbs',
                 element: <StrawbPage/>,
             },
             {
-                path: '/goes',
+                path: '/banan/goes',
                 element: <GoesPage/>,
             },
         ],

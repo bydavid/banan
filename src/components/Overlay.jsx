@@ -41,7 +41,7 @@ export default function Overlay() {
               </RightMiddle>
               <BottomMiddle>
 
-                  <StyledLink to={'/'}>🍌 Banan</StyledLink>
+                  <StyledLink to={'/banan'}>🍌 Banan</StyledLink>
                   <div/>
                   <StyledLink to={'strawbs'}>🍓 Strawbs</StyledLink>
                   <div/>
@@ -50,7 +50,7 @@ export default function Overlay() {
               <BottomRight>
               </BottomRight>
               <TopRight>
-                  <a href='https://bydavid.me'><img src="src/assets/banner.png" alt="banner" /></a>
+                  <a href='https://bydavid.me'><img src="/banan/banner.png" alt="banner" /></a>
               </TopRight>
               <VelvetBanana />
             </FadeIn>

@@ -5,7 +5,7 @@ import * as THREE from 'three'
 
 export default function Strawb({index, z, speed}) {
     const ref = useRef()
-    const { nodes, materials } = useGLTF("/strawberry-v1.glb");
+    const { nodes, materials } = useGLTF("/banan/strawberry-v1.glb");
 
     const { viewport, camera } = useThree()
     const { width, height } = viewport.getCurrentViewport(camera, [ 0, 0, -z])
