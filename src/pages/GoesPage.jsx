@@ -12,7 +12,7 @@ export default function GoesPage({ speed = 1, count = 100, depth = 80, easing = 
                 <spotLight position={[10, 20, 10]} penumbra={1} intensity={3} color="red"/>
                 {Array.from({ length: count }, (_, i) => <Goes key={i} index={i} z={Math.round(easing(i / count) * depth)} speed={speed} />)}
                 console.log(Math.round(easing(i / count) * depth))
-                <Environment files="venice_dawn.hdr"/>
+                {/*<Environment files="venice_dawn.hdr"/>*/}
                 <EffectComposer multisampling={0}>
                     <DepthOfField target={[0, 0, 60]} focalLength={1} bokehScale={10} height={700}/>
                 </EffectComposer>
